@@ -7,7 +7,7 @@
 Install the Lightning-CLI _globally_ on your system
 
 ```bash
-npm install -g WebPlatformForEmbedded/Lightning-CLI
+npm install -g @lightningjs/cli
 ```
 
 Usage:

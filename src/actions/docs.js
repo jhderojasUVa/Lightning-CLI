@@ -22,7 +22,7 @@ const path = require('path')
 
 module.exports = () => {
   execa(path.join(__dirname, '../..', 'node_modules/.bin/http-server'), [
-    path.join(process.cwd(), 'node_modules/wpe-lightning-sdk/docs'),
+    path.join(process.cwd(), 'node_modules/@lightningjs/sdk/docs'),
     '-o',
     '-c-1',
   ])

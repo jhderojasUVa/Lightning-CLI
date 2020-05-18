@@ -30,7 +30,8 @@ module.exports = {
   plugins: [
     alias({
       entries: {
-        'wpe-lightning': path.join(__dirname, '../alias/wpe-lightning.js'),
+        'wpe-lightning': path.join(__dirname, '../alias/lightningjs.js'),
+        '@lightningjs/core': path.join(__dirname, '../alias/lightningjs.js'),
         '@': path.resolve(process.cwd(), 'src/'),
         '~': path.resolve(process.cwd(), 'node_modules/'),
       },
