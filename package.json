@@ -2,7 +2,7 @@
   "author": "Michiel van der Geest <m.van.der.geest@metrological.com>",
   "license": "Apache-2.0",
   "name": "@lightningjs/cli",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "",
   "bin": {
     "lightning": "./bin/index.js",
@@ -36,7 +36,7 @@
     "execa": "^3.4.0",
     "form-data": "^3.0.0",
     "fs-extra": "^8.1.0",
-    "http-server": "^0.12.0",
+    "http-server": "^0.12.3",
     "inquirer": "^7.0.0",
     "is-online": "^8.2.1",
     "ora": "^4.0.3",
