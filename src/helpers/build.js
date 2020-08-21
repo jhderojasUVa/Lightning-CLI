@@ -27,6 +27,12 @@ const os = require('os')
 
 const spinner = require('./spinner')
 
+const environments = {
+  DEV: 'dev',
+  PROD: 'prod',
+  TEST: 'test',
+}
+
 const removeFolder = folder => {
   spinner.start('Removing "' + folder.split('/').pop() + '" folder')
   shell.rm('-rf', folder)
@@ -104,8 +110,18 @@ const readMetadata = () => {
   return readJson('metadata.json')
 }
 
-const readSettings = () => {
-  return readJson('settings.json')
+const readSettings = (env = environments.DEV) => {
+  const settings = readJson('settings.json')
+  switch (env) {
+    case environments.DEV:
+      return settings.dev ? settings.dev : settings
+    case environments.PROD:
+      return settings.prod ? settings.prod : settings
+    case environments.TEST:
+      return settings.test ? settings.test : settings
+    default:
+      return settings
+  }
 }
 
 const readJson = fileName => {
